@@ -33,5 +33,13 @@ namespace HomeWork
                 Result.Content = $"Результат: {MathResult}";
             }
         }
+        private void TwoCalculate(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(X.Text, out double x) && double.TryParse(Y.Text, out double y))
+            {
+                bool MathResult = x >= -2 && x <= 3 && y >= 2 && y <= 5 || x >= 3 && x <= 5 && y >= 2 && y <= 3;
+                TwoResult.Content = $"Результат: {MathResult}";
+            }
+        }
     }
 }
