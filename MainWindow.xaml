@@ -6,22 +6,30 @@
         xmlns:local="clr-namespace:HomeWork"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="500" MinWidth="500">
-    <StackPanel>
-        <Grid>
-            <TextBox x:Name="X" HorizontalAlignment="Left" Margin="24,4,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="Y" HorizontalAlignment="Left" Margin="171,4,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-            <Label Content="X" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Top"/>
-            <Label Content="Y" HorizontalAlignment="Left" Margin="149,0,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="Result" Content="Результат: 2" HorizontalAlignment="Left" Margin="417,0,0,0" VerticalAlignment="Top" Width="383"/>
-            <Button Content="Расчитать" Click="Calculate" HorizontalAlignment="Left" Margin="327,4,0,0" VerticalAlignment="Top"/>
-        </Grid>
-        <Grid>
-            <TextBox x:Name="TwoX" HorizontalAlignment="Left" Margin="24,4,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="TwoY" HorizontalAlignment="Left" Margin="171,4,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-            <Label Content="X" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Top"/>
-            <Label Content="Y" HorizontalAlignment="Left" Margin="149,0,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="TwoResult" Content="Результат: 2" HorizontalAlignment="Left" Margin="417,0,0,0" VerticalAlignment="Top" Width="383"/>
-            <Button Content="Расчитать" Click="TwoCalculate" HorizontalAlignment="Left" Margin="327,4,0,0" VerticalAlignment="Top"/>
-        </Grid>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Content="X" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="X" Text="0" VerticalAlignment="Center"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Y" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="3" x:Name="Y" Text="0" VerticalAlignment="Center"/>
+        <Button Grid.Row="0" Grid.Column="4" Content="Расчитать" Click="Calculate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="0" Grid.Column="5" x:Name="Result" Content="Результат: 2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="X" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TwoX" Text="0" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="2" Content="Y" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="3" x:Name="TwoY" Text="0" VerticalAlignment="Center"/>
+        <Button Grid.Row="1" Grid.Column="4" Content="Расчитать" Click="TwoCalculate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="5" x:Name="TwoResult" Content="Результат: 2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
 </Window>

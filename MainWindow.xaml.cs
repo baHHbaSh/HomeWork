@@ -22,7 +22,7 @@ namespace HomeWork
         }
         private double SomeMathFunc(double x, double y)
         {
-            return Math.Pow(1-Math.Tan(x), 1/Math.Tan(x))+Math.Cos(x-y);
+            return 1/Math.Tan((x-y)/Math.Pow(x+2, 1/3) + Math.Abs(2*x));
         }
 
         private void Calculate(object sender, RoutedEventArgs e)
